@@ -1,0 +1,258 @@
+[gd_scene load_steps=13 format=3 uid="uid://f1nauqaim6gu"]
+
+[ext_resource type="Script" uid="uid://bngodpkndwsm7" path="res://scripts/tutorial.gd" id="1_40fd7"]
+[ext_resource type="Texture2D" uid="uid://ck8hfahpf3wom" path="res://assets/sheets/test.png" id="1_nf42y"]
+[ext_resource type="FontFile" uid="uid://bp4xm1117sicd" path="res://assets/fonts/PixelifySans-VariableFont_wght.ttf" id="2_vnofq"]
+[ext_resource type="FontFile" uid="uid://3gy35vhxf22n" path="res://assets/fonts/PixelOperator.ttf" id="3_2h84y"]
+[ext_resource type="Texture2D" uid="uid://cwc6jfp21jag8" path="res://assets/sheets/Keyboard Letters and Symbols.png" id="3_m5l38"]
+[ext_resource type="Texture2D" uid="uid://bwfk1mqem5af1" path="res://assets/sheets/Keyboard Extras.png" id="4_40fd7"]
+[ext_resource type="Texture2D" uid="uid://b2ue1i2hphi4t" path="res://assets/sheets/Keyboard Extras (1).png" id="5_m5l38"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m5l38"]
+texture = ExtResource("1_nf42y")
+modulate_color = Color(0.205117, 0.205117, 0.205117, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_40fd7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1uhyp"]
+bg_color = Color(0.779291, 0.779291, 0.779291, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_37wlr"]
+bg_color = Color(0.408329, 0.408329, 0.408329, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xkjag"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[node name="Tutorial" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_40fd7")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_m5l38")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.107
+anchor_right = 0.5
+anchor_bottom = 0.111
+offset_left = -123.0
+offset_top = -40.336
+offset_right = 117.0
+offset_bottom = 34.072
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_vnofq")
+theme_override_font_sizes/font_size = 64
+text = "Controls"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.334
+anchor_right = 0.5
+anchor_bottom = 0.334
+offset_left = -374.0
+offset_top = -21.432
+offset_right = -227.0
+offset_bottom = 21.568
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_vnofq")
+theme_override_font_sizes/font_size = 32
+text = "Run Left:"
+
+[node name="Sprite2D" type="Sprite2D" parent="Label2"]
+position = Vector2(591, 23)
+scale = Vector2(4.03846, 4.03846)
+texture = ExtResource("3_m5l38")
+region_enabled = true
+region_rect = Rect2(-0.204163, 146.301, 15.4217, 13.1085)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Label2"]
+position = Vector2(529, 22)
+scale = Vector2(4.03846, 4.03846)
+texture = ExtResource("3_m5l38")
+region_enabled = true
+region_rect = Rect2(32.579, 113.211, 13.9952, 15.2675)
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.462
+anchor_right = 0.5
+anchor_bottom = 0.462
+offset_left = -372.0
+offset_top = -21.376
+offset_right = -225.0
+offset_bottom = 21.624
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_vnofq")
+theme_override_font_sizes/font_size = 32
+text = "Run RIght:"
+
+[node name="Sprite2D2" type="Sprite2D" parent="Label3"]
+position = Vector2(594.5, 20)
+scale = Vector2(4.03846, 4.03846)
+texture = ExtResource("3_m5l38")
+region_enabled = true
+region_rect = Rect2(48.1313, 146.063, 15.0712, 14.7544)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Label3"]
+position = Vector2(531.5, 17)
+scale = Vector2(4.03846, 4.03846)
+texture = ExtResource("3_m5l38")
+region_enabled = true
+region_rect = Rect2(48.3581, 114.129, 14.1241, 13.406)
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.578
+anchor_right = 0.5
+anchor_bottom = 0.578
+offset_left = -376.0
+offset_top = -21.544
+offset_right = -229.0
+offset_bottom = 21.456
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_vnofq")
+theme_override_font_sizes/font_size = 32
+text = "Jump:"
+
+[node name="Sprite2D3" type="Sprite2D" parent="Label4"]
+position = Vector2(593, 26)
+scale = Vector2(4.03846, 4.03846)
+texture = ExtResource("3_m5l38")
+region_enabled = true
+region_rect = Rect2(95.8642, 177.644, 14.7207, 15.0712)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Label4"]
+position = Vector2(532, 21)
+scale = Vector2(4.03846, 4.03846)
+texture = ExtResource("3_m5l38")
+region_enabled = true
+region_rect = Rect2(0.58873, 113.797, 14.8434, 13.0541)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Label4"]
+position = Vector2(691, 18)
+scale = Vector2(4.03846, 4.03846)
+texture = ExtResource("4_40fd7")
+region_enabled = true
+region_rect = Rect2(62.9608, 96.1448, 32.8421, 14.8816)
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.708
+anchor_right = 0.5
+anchor_bottom = 0.708
+offset_left = -375.0
+offset_top = -21.784
+offset_right = -228.0
+offset_bottom = 21.216
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_vnofq")
+theme_override_font_sizes/font_size = 32
+text = "Shoot:"
+
+[node name="Sprite2D4" type="Sprite2D" parent="Label5"]
+position = Vector2(596, 22)
+scale = Vector2(4.03846, 4.03846)
+texture = ExtResource("3_m5l38")
+region_enabled = true
+region_rect = Rect2(16.5819, 162.659, 14.7207, 13.8848)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Label5"]
+position = Vector2(684, 17)
+scale = Vector2(4.03846, 4.03846)
+texture = ExtResource("5_m5l38")
+region_enabled = true
+region_rect = Rect2(4.04807, 97.1604, 24.8293, 14.4617)
+
+[node name="Label6" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.815
+anchor_right = 0.5
+anchor_bottom = 0.815
+offset_left = -376.0
+offset_top = -21.1201
+offset_right = -229.0
+offset_bottom = 20.8799
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_vnofq")
+theme_override_font_sizes/font_size = 32
+text = "Escape:"
+
+[node name="Sprite2D5" type="Sprite2D" parent="Label6"]
+position = Vector2(597, 20)
+scale = Vector2(4.03846, 4.03846)
+texture = ExtResource("4_40fd7")
+region_enabled = true
+region_rect = Rect2(37.2977, 64.408, 22.0145, 15.2408)
+
+[node name="back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.061
+anchor_top = 0.063
+anchor_right = 0.061
+anchor_bottom = 0.063
+offset_left = -54.272
+offset_top = -23.824
+offset_right = 53.728
+offset_bottom = 24.176
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_2h84y")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_40fd7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1uhyp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_37wlr")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xkjag")
+text = "Back"
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6eajoqx5be5n"]
+
+[ext_resource type="Texture2D" uid="uid://dwggifqgd4uj1" path="res://assets/sheets/signs.png" id="1_tx4t3"]
+
+[node name="Sprite_down" type="Sprite2D"]
+texture = ExtResource("1_tx4t3")
+region_enabled = true
+region_rect = Rect2(32.6369, 34.0708, 31.3631, 29.9292)

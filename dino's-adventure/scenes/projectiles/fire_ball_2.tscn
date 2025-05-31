@@ -1,0 +1,66 @@
+[gd_scene load_steps=10 format=3 uid="uid://fumab0hmfog2"]
+
+[ext_resource type="Texture2D" uid="uid://d0s4cph4pspt" path="res://assets/sheets/All_Fire_Bullet_Pixel_16x16 (1).png" id="1_3mdqq"]
+[ext_resource type="PackedScene" uid="uid://bbefk2dirop3r" path="res://scenes/handlers/hurt_box.tscn" id="1_wtvgg"]
+[ext_resource type="Script" uid="uid://b3y5cmperubmr" path="res://scripts/fire_ball_2.gd" id="1_xvsjk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5iknh"]
+atlas = ExtResource("1_3mdqq")
+region = Rect2(256, 240, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7j0so"]
+atlas = ExtResource("1_3mdqq")
+region = Rect2(288, 240, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gxr4x"]
+atlas = ExtResource("1_3mdqq")
+region = Rect2(320, 240, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4usyv"]
+atlas = ExtResource("1_3mdqq")
+region = Rect2(352, 240, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0cc6o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5iknh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7j0so")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gxr4x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4usyv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xvsjk"]
+radius = 4.23149
+
+[node name="fire_ball2" type="AnimatedSprite2D"]
+z_index = 3
+sprite_frames = SubResource("SpriteFrames_0cc6o")
+autoplay = "default"
+script = ExtResource("1_xvsjk")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_xvsjk")
+
+[node name="Hurt_Box" parent="." instance=ExtResource("1_wtvgg")]
+collision_layer = 4
+collision_mask = 4
+temp_damage = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurt_Box"]
+shape = SubResource("CircleShape2D_xvsjk")

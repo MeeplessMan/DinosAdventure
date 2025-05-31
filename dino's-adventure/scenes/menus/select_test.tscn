@@ -1,0 +1,175 @@
+[gd_scene load_steps=12 format=3 uid="uid://cjvryj1vbllqj"]
+
+[ext_resource type="Script" uid="uid://bp6febxwqwcwc" path="res://scripts/select_test.gd" id="1_c7pfw"]
+[ext_resource type="Texture2D" uid="uid://ck8hfahpf3wom" path="res://assets/sheets/test.png" id="1_lavcn"]
+[ext_resource type="Texture2D" uid="uid://bxl30awyosw1" path="res://assets/sheets/level_test.PNG" id="2_iu7hc"]
+[ext_resource type="FontFile" uid="uid://3gy35vhxf22n" path="res://assets/fonts/PixelOperator.ttf" id="3_iu7hc"]
+[ext_resource type="FontFile" uid="uid://bp4xm1117sicd" path="res://assets/fonts/PixelifySans-VariableFont_wght.ttf" id="4_85qhv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_85qhv"]
+texture = ExtResource("1_lavcn")
+modulate_color = Color(0.205117, 0.205117, 0.205117, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c7pfw"]
+texture = ExtResource("2_iu7hc")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(0, 57.9669, 1729, 971.033)
+modulate_color = Color(0.899258, 0.899258, 0.899258, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_85qhv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7pfw"]
+bg_color = Color(0.779291, 0.779291, 0.779291, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8pcid"]
+bg_color = Color(0.408329, 0.408329, 0.408329, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d8dl4"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[node name="select_test" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c7pfw")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_85qhv")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.191
+anchor_top = 0.154
+anchor_right = 0.788
+anchor_bottom = 0.752
+offset_left = -0.0320129
+offset_top = 0.207993
+offset_right = 0.223938
+offset_bottom = -0.296021
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_c7pfw")
+
+[node name="play" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.437
+anchor_top = 0.792
+anchor_right = 0.531
+anchor_bottom = 0.866
+offset_left = 0.575989
+offset_top = -0.216064
+offset_right = 0.287964
+offset_bottom = -0.16803
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_iu7hc")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_85qhv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_c7pfw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8pcid")
+theme_override_styles/normal = SubResource("StyleBoxFlat_d8dl4")
+text = "Play"
+
+[node name="next" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.845
+anchor_top = 0.437
+anchor_right = 0.939
+anchor_bottom = 0.511
+offset_left = 0.559937
+offset_top = -0.175995
+offset_right = 0.271973
+offset_bottom = -0.128021
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_iu7hc")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_85qhv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_c7pfw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8pcid")
+theme_override_styles/normal = SubResource("StyleBoxFlat_d8dl4")
+text = "Next"
+
+[node name="back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.035
+anchor_top = 0.046
+anchor_right = 0.128
+anchor_bottom = 0.12
+offset_left = -0.32
+offset_top = 0.191998
+offset_right = 0.543991
+offset_bottom = 0.239998
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_iu7hc")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_85qhv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_c7pfw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8pcid")
+theme_override_styles/normal = SubResource("StyleBoxFlat_d8dl4")
+text = "Back"
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.42
+anchor_top = 0.049
+anchor_right = 0.557
+anchor_bottom = 0.133
+offset_left = 0.159973
+offset_top = 0.247999
+offset_right = 0.335938
+offset_bottom = -0.183998
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_85qhv")
+theme_override_font_sizes/font_size = 42
+text = "Level: Test"
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

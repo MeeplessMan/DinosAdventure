@@ -1,0 +1,171 @@
+[gd_scene load_steps=10 format=3 uid="uid://b7h2lo1ic2wrw"]
+
+[ext_resource type="Texture2D" uid="uid://ck8hfahpf3wom" path="res://assets/sheets/test.png" id="1_iiqlc"]
+[ext_resource type="Script" uid="uid://bfhxuwid6a4wb" path="res://scripts/credits.gd" id="1_yrcfj"]
+[ext_resource type="FontFile" uid="uid://bp4xm1117sicd" path="res://assets/fonts/PixelifySans-VariableFont_wght.ttf" id="2_b2mra"]
+[ext_resource type="FontFile" uid="uid://3gy35vhxf22n" path="res://assets/fonts/PixelOperator.ttf" id="4_44wmd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yrcfj"]
+texture = ExtResource("1_iiqlc")
+modulate_color = Color(0.205117, 0.205117, 0.205117, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xvxbb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xlnvo"]
+bg_color = Color(0.779291, 0.779291, 0.779291, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h70dw"]
+bg_color = Color(0.408329, 0.408329, 0.408329, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q5tt2"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[node name="credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yrcfj")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_yrcfj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.107
+anchor_right = 0.5
+anchor_bottom = 0.111
+offset_left = -123.0
+offset_top = -40.336
+offset_right = 117.0
+offset_bottom = 34.072
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_b2mra")
+theme_override_font_sizes/font_size = 64
+text = "Credits"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.495
+anchor_top = 0.219
+anchor_right = 0.495
+anchor_bottom = 0.219
+offset_left = -118.24
+offset_top = -26.912
+offset_right = 117.76
+offset_bottom = 27.088
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_b2mra")
+theme_override_font_sizes/font_size = 42
+text = "Developers:"
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.493
+anchor_top = 0.662
+anchor_right = 0.493
+anchor_bottom = 0.662
+offset_left = -78.936
+offset_top = -26.976
+offset_right = 79.064
+offset_bottom = 27.024
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_b2mra")
+theme_override_font_sizes/font_size = 42
+text = "Assets:"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.496
+anchor_top = 0.408
+anchor_right = 0.496
+anchor_bottom = 0.408
+offset_left = -373.392
+offset_top = -87.384
+offset_right = 372.608
+offset_bottom = 119.616
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_b2mra")
+theme_override_font_sizes/font_size = 32
+text = "Atesh Reddy                                          Prevani Moodley
+Violan Reddy                                           Keabetswe Kadiege
+Ndingeko Unathi Gumede             Siboniso Magubane
+Tshepo Masiteng                               Amahle Bhulose
+Nkanyiso Xaba                                     Thabo Shabalala"
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.837
+anchor_right = 0.5
+anchor_bottom = 0.837
+offset_left = -376.0
+offset_top = -82.376
+offset_right = 375.0
+offset_bottom = 82.624
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_b2mra")
+theme_override_font_sizes/font_size = 32
+text = "Eduardo Scarpato                          GrafxKid
+Anokolisa                                                  La Red Games
+BDragon1727                                          Arks
+ Eithen's Pixel Art Shop"
+
+[node name="back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.061
+anchor_top = 0.063
+anchor_right = 0.061
+anchor_bottom = 0.063
+offset_left = -54.272
+offset_top = -23.824
+offset_right = 53.728
+offset_bottom = 24.176
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_44wmd")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xvxbb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xlnvo")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_h70dw")
+theme_override_styles/normal = SubResource("StyleBoxFlat_q5tt2")
+text = "Back"
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcqj1t86xqdyk"]
+
+[ext_resource type="Texture2D" uid="uid://ddbjb6cp5dumr" path="res://assets/sheets/Background_1.png" id="1_y0upk"]
+[ext_resource type="Texture2D" uid="uid://sy2xo7frtk8o" path="res://assets/sheets/Background_2.png" id="2_jougr"]
+
+[node name="Background" type="Sprite2D"]
+position = Vector2(31.75, -4.53126)
+scale = Vector2(1.56149, 1.67302)
+texture = ExtResource("1_y0upk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 41.5)
+scale = Vector2(1, 1.04333)
+texture = ExtResource("2_jougr")
+offset = Vector2(0, -135)

@@ -1,0 +1,241 @@
+[gd_scene load_steps=23 format=3 uid="uid://cbcvs6yagfgox"]
+
+[ext_resource type="FontFile" uid="uid://3gy35vhxf22n" path="res://assets/fonts/PixelOperator.ttf" id="1_ahhtf"]
+[ext_resource type="Script" uid="uid://bg5ldoomyh1j0" path="res://scripts/hud.gd" id="1_oo0fn"]
+[ext_resource type="Texture2D" uid="uid://cb36ja5xwifsj" path="res://assets/sheets/heart_animated_2.png" id="3_lp4ki"]
+[ext_resource type="Texture2D" uid="uid://p0tgmhsywfvh" path="res://assets/sheets/heart_animated_1.png" id="4_7fqom"]
+[ext_resource type="Texture2D" uid="uid://yk1yu4cjf73x" path="res://assets/sheets/Coins/MonedaD.png" id="5_5l0kn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6kbw"]
+atlas = ExtResource("5_5l0kn")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idlsa"]
+atlas = ExtResource("5_5l0kn")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_um5c3"]
+atlas = ExtResource("5_5l0kn")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bbk8j"]
+atlas = ExtResource("5_5l0kn")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhqdt"]
+atlas = ExtResource("5_5l0kn")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h2sl2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6kbw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idlsa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_um5c3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bbk8j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhqdt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fqom"]
+atlas = ExtResource("3_lp4ki")
+region = Rect2(68, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5l0kn"]
+atlas = ExtResource("3_lp4ki")
+region = Rect2(0, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mij2j"]
+atlas = ExtResource("4_7fqom")
+region = Rect2(0, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x827t"]
+atlas = ExtResource("4_7fqom")
+region = Rect2(17, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1m2b"]
+atlas = ExtResource("4_7fqom")
+region = Rect2(34, 0, 17, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vttff"]
+atlas = ExtResource("4_7fqom")
+region = Rect2(51, 0, 17, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x827t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fqom")
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5l0kn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mij2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x827t")
+}],
+"loop": true,
+"name": &"full",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1m2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vttff")
+}],
+"loop": true,
+"name": &"half",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5l0kn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mij2j"]
+bg_color = Color(0.779291, 0.779291, 0.779291, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x827t"]
+bg_color = Color(0.408329, 0.408329, 0.408329, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d6kbw"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3)
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_oo0fn")
+
+[node name="ScoreLabel" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.982
+anchor_top = 0.04
+anchor_right = 0.982
+anchor_bottom = 0.04
+offset_left = -28.264
+offset_top = -21.92
+offset_right = -0.264038
+offset_bottom = 42.08
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("1_ahhtf")
+theme_override_font_sizes/font_size = 64
+text = "0"
+
+[node name="StaticCoin" type="AnimatedSprite2D" parent="ScoreLabel"]
+position = Vector2(-68, 34)
+scale = Vector2(3.6875, 3.6875)
+sprite_frames = SubResource("SpriteFrames_h2sl2")
+autoplay = "default"
+
+[node name="timer" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.043
+anchor_right = 0.5
+anchor_bottom = 0.043
+offset_left = -104.0
+offset_top = -20.864
+offset_right = 104.0
+offset_bottom = 43.136
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_ahhtf")
+theme_override_font_sizes/font_size = 64
+
+[node name="Hearts" type="Node" parent="."]
+
+[node name="Heart1" type="AnimatedSprite2D" parent="Hearts"]
+position = Vector2(38.375, 39.375)
+scale = Vector2(3.22059, 3.22059)
+sprite_frames = SubResource("SpriteFrames_x827t")
+animation = &"full"
+autoplay = "full"
+
+[node name="Heart2" type="AnimatedSprite2D" parent="Hearts"]
+position = Vector2(114.375, 39.375)
+scale = Vector2(3.22059, 3.22059)
+sprite_frames = SubResource("SpriteFrames_x827t")
+animation = &"full"
+autoplay = "full"
+
+[node name="Heart3" type="AnimatedSprite2D" parent="Hearts"]
+position = Vector2(192.375, 39.375)
+scale = Vector2(3.22059, 3.22059)
+sprite_frames = SubResource("SpriteFrames_x827t")
+animation = &"full"
+autoplay = "full"
+
+[node name="Heart4" type="AnimatedSprite2D" parent="Hearts"]
+position = Vector2(265.375, 39.375)
+scale = Vector2(3.22059, 3.22059)
+sprite_frames = SubResource("SpriteFrames_x827t")
+animation = &"full"
+autoplay = "full"
+
+[node name="Heart5" type="AnimatedSprite2D" parent="Hearts"]
+position = Vector2(334.375, 39.375)
+scale = Vector2(3.22059, 3.22059)
+sprite_frames = SubResource("SpriteFrames_x827t")
+animation = &"full"
+autoplay = "full"
+
+[node name="sound" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.954
+anchor_top = 0.938
+anchor_right = 0.954
+anchor_bottom = 0.938
+offset_left = -92.0081
+offset_top = -23.824
+offset_right = 15.9919
+offset_bottom = 24.176
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ahhtf")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5l0kn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mij2j")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x827t")
+theme_override_styles/normal = SubResource("StyleBoxFlat_d6kbw")
+text = "SOUND
+"
+
+[connection signal="pressed" from="sound" to="." method="_on_sound_pressed"]

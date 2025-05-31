@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://btw3usyc2k4kf"]
+
+[ext_resource type="Texture2D" uid="uid://dwggifqgd4uj1" path="res://assets/sheets/signs.png" id="1_rxx5k"]
+
+[node name="Sign_up" type="Sprite2D"]
+z_index = 2
+texture = ExtResource("1_rxx5k")
+region_enabled = true
+region_rect = Rect2(0, 31.5217, 30.7251, 32.4783)

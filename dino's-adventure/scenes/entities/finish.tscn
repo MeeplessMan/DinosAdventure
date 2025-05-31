@@ -1,0 +1,68 @@
+[gd_scene load_steps=11 format=3 uid="uid://bcub6rs1sbb24"]
+
+[ext_resource type="Texture2D" uid="uid://csb1vt7rheihc" path="res://assets/sheets/flag animation.png" id="1_paedp"]
+[ext_resource type="Script" uid="uid://cogdwxgmje4y1" path="res://scripts/finish.gd" id="1_vdynu"]
+[ext_resource type="AudioStream" uid="uid://o2tgg2nplnwy" path="res://assets/sounds/completed.mp3" id="3_nxgr5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ec6r"]
+atlas = ExtResource("1_paedp")
+region = Rect2(0, 0, 60, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0yxjo"]
+atlas = ExtResource("1_paedp")
+region = Rect2(60, 0, 60, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vftco"]
+atlas = ExtResource("1_paedp")
+region = Rect2(120, 0, 60, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0k47"]
+atlas = ExtResource("1_paedp")
+region = Rect2(180, 0, 60, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_48yut"]
+atlas = ExtResource("1_paedp")
+region = Rect2(240, 0, 60, 60)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bw2n3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ec6r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0yxjo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vftco")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0k47")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_48yut")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wuxoy"]
+radius = 4.0
+
+[node name="Finish" type="Area2D"]
+script = ExtResource("1_vdynu")
+temp_damage = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2.38419e-07, 2.38419e-07)
+scale = Vector2(0.625, 0.625)
+sprite_frames = SubResource("SpriteFrames_bw2n3")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_wuxoy")
+
+[node name="coin" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_nxgr5")
+volume_db = -5.0

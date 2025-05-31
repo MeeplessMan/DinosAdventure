@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://conlwgc43cn4x"]
+
+[ext_resource type="Texture2D" uid="uid://dwggifqgd4uj1" path="res://assets/sheets/signs.png" id="1_hhywa"]
+
+[node name="Sign_right" type="Sprite2D"]
+texture = ExtResource("1_hhywa")
+region_enabled = true
+region_rect = Rect2(2.68559, 5.07535, 29.6327, 26.765)

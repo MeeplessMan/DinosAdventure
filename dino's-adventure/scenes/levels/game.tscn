@@ -1,0 +1,314 @@
+[gd_scene load_steps=26 format=3 uid="uid://bxmewa3uvgb32"]
+
+[ext_resource type="PackedScene" uid="uid://bcqj1t86xqdyk" path="res://scenes/layers/background.tscn" id="1_uk881"]
+[ext_resource type="Texture2D" uid="uid://co8cmfrnhx8k1" path="res://assets/sheets/Assets.png" id="2_r0gsk"]
+[ext_resource type="PackedScene" uid="uid://cbcvs6yagfgox" path="res://scenes/layers/hud.tscn" id="3_oi2tv"]
+[ext_resource type="PackedScene" uid="uid://b2583nux4sbd3" path="res://scenes/entities/player.tscn" id="4_6370d"]
+[ext_resource type="PackedScene" uid="uid://hiv2aahg8aha" path="res://scenes/handlers/killzone.tscn" id="5_fojqs"]
+[ext_resource type="PackedScene" uid="uid://c2dixpifigj1i" path="res://scenes/entities/coin.tscn" id="6_bgnkb"]
+[ext_resource type="PackedScene" uid="uid://ducfjudqi7sw2" path="res://scenes/platforms/platform.tscn" id="7_eiv1w"]
+[ext_resource type="PackedScene" uid="uid://14qyg76dtawo" path="res://scenes/entities/frog.tscn" id="8_d2m8s"]
+[ext_resource type="FontFile" uid="uid://3gy35vhxf22n" path="res://assets/fonts/PixelOperator.ttf" id="9_886ur"]
+[ext_resource type="PackedScene" uid="uid://1a4hxxui204q" path="res://scenes/platforms/spike_trap.tscn" id="10_r4lr3"]
+[ext_resource type="PackedScene" uid="uid://cwua08msk6vi5" path="res://scenes/platforms/spike_2.tscn" id="11_r0gsk"]
+[ext_resource type="PackedScene" uid="uid://cauferlirr7vi" path="res://scenes/entities/wisp.tscn" id="12_oi2tv"]
+[ext_resource type="PackedScene" uid="uid://b8bfgm2jim70" path="res://scenes/entities/moscotty.tscn" id="13_6370d"]
+[ext_resource type="PackedScene" uid="uid://cdl1e5v383vaq" path="res://scenes/entities/hcoin.tscn" id="14_fojqs"]
+[ext_resource type="PackedScene" uid="uid://dvmid3uldtt3e" path="res://scenes/entities/pcoin.tscn" id="15_bgnkb"]
+[ext_resource type="PackedScene" uid="uid://bcub6rs1sbb24" path="res://scenes/entities/finish.tscn" id="16_eiv1w"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6370d"]
+texture = ExtResource("2_r0gsk")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:5/0 = 0
+2:5/0 = 0
+2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:5/0 = 0
+12:5/0 = 0
+0:6/0 = 0
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:6/0 = 0
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:6/0 = 0
+2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+10:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+0:9/0 = 0
+0:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(1.79859, -1.79859, 1.43887, -8, 8, -8, 8, 1.07915, 3.77703, 0.719435)
+1:9/0 = 0
+1:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0.899294, -8, -8, 8, -8, 8, 0.719435)
+2:9/0 = 0
+2:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0.899294, -8, -8, 8, -8, 8, 0.719435)
+3:9/0 = 0
+3:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0.899294, -8, -8, -1.25901, -8, -1.79859, -2.33816, -3.41732, 0.719435)
+0:7/0 = 0
+0:8/0 = 0
+5:5/size_in_atlas = Vector2i(3, 2)
+5:5/0 = 0
+5:8/size_in_atlas = Vector2i(3, 2)
+5:8/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+4:6/size_in_atlas = Vector2i(1, 3)
+4:6/0 = 0
+8:6/size_in_atlas = Vector2i(1, 3)
+8:6/0 = 0
+5:0/size_in_atlas = Vector2i(3, 2)
+5:0/0 = 0
+5:3/size_in_atlas = Vector2i(3, 2)
+5:3/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:1/size_in_atlas = Vector2i(1, 3)
+8:1/0 = 0
+4:1/size_in_atlas = Vector2i(1, 3)
+4:1/0 = 0
+10:0/size_in_atlas = Vector2i(3, 2)
+10:0/0 = 0
+10:3/size_in_atlas = Vector2i(3, 2)
+10:3/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:1/size_in_atlas = Vector2i(1, 3)
+13:1/0 = 0
+9:1/size_in_atlas = Vector2i(1, 3)
+9:1/0 = 0
+3:4/0 = 0
+3:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_lbhrr"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_6370d")
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_p57ef"]
+distance = -83.0
+
+[sub_resource type="Animation" id="Animation_lbhrr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(91, 7)]
+}
+
+[sub_resource type="Animation" id="Animation_lnu2h"]
+resource_name = "move"
+length = 1.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(88, 8), Vector2(160, 8)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iywne"]
+_data = {
+&"RESET": SubResource("Animation_lbhrr"),
+&"move": SubResource("Animation_lnu2h")
+}
+
+[sub_resource type="Animation" id="Animation_oi2tv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(360, -10)]
+}
+
+[sub_resource type="Animation" id="Animation_r0gsk"]
+resource_name = "new_animation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(360, -10), Vector2(391, -10)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6370d"]
+_data = {
+&"RESET": SubResource("Animation_oi2tv"),
+&"new_animation": SubResource("Animation_r0gsk")
+}
+
+[node name="Game" type="Node2D"]
+
+[node name="Background" parent="." instance=ExtResource("1_uk881")]
+position = Vector2(290, -96)
+rotation = 0.00477298
+scale = Vector2(2.20527, 1.91134)
+
+[node name="Background3" parent="." instance=ExtResource("1_uk881")]
+position = Vector2(1366, -88)
+rotation = 0.00477298
+scale = Vector2(2.20527, 1.91134)
+
+[node name="Background2" parent="." instance=ExtResource("1_uk881")]
+position = Vector2(-799, -100)
+rotation = 0.00477298
+scale = Vector2(2.20527, 1.91134)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_lbhrr")
+format = 2
+layer_0/name = "Mid"
+layer_0/z_index = 1
+layer_0/tile_data = PackedInt32Array(65531, 65536, 4, 65532, 65536, 4, 65533, 65536, 4, 65534, 65536, 4, 65535, 65536, 4, 0, 65536, 4, 1, 65536, 4, 2, 65536, 4, 3, 131072, 4, 131075, 131072, 5, 196611, 131072, 5, 65530, 0, 4, 131066, 131072, 5, 196602, 131072, 5, 262138, 131072, 5, 327674, 131072, 5, 262147, 131072, 5, 131067, 65536, 0, 131068, 65536, 0, 131069, 65536, 0, 131070, 65536, 0, 131071, 65536, 0, 65536, 65536, 0, 65537, 65536, 0, 65538, 65536, 0, 65539, 131072, 5, 196603, 65536, 2, 196604, 65536, 2, 196605, 65536, 1, 196606, 65536, 1, 196607, 65536, 1, 131072, 65536, 1, 131073, 65536, 2, 131074, 65536, 2, 196609, 65536, 2, 196608, 65536, 2, 262143, 65536, 2, 262142, 65536, 2, 262141, 65536, 2, 262140, 65536, 2, 262139, 65536, 3, 327675, 65536, 3, 327676, 65536, 3, 327677, 65536, 3, 327678, 65536, 3, 327679, 65536, 3, 262144, 65536, 3, 262145, 65536, 3, 262146, 65536, 3, 196610, 65536, 3, -5, 0, 8, -65541, 0, 7, -65534, 0, 8, -131070, 0, 7, -65524, 0, 4, 12, 0, 5, 65548, 0, 5, 131084, 0, 5, 196620, 0, 5, 262156, 0, 5, 13, 131072, 6, 14, 65536, 4, 15, 65536, 4, 16, 65536, 4, 17, 65536, 4, 18, 65536, 4, 19, 131072, 6, -65523, 131072, 4, -65517, 0, 4, -65516, 131072, 4, 20, 131072, 5, 65556, 131072, 5, 131092, 131072, 5, 196628, 131072, 5, 262164, 131072, 5, 65549, 65536, 0, 65550, 65536, 0, 65551, 65536, 0, 65552, 65536, 0, 65553, 65536, 0, 65554, 65536, 0, 65555, 65536, 0, 131087, 65536, 1, 131088, 65536, 1, 131089, 65536, 1, 131085, 65536, 2, 131086, 65536, 2, 196622, 65536, 2, 196623, 65536, 2, 196624, 65536, 2, 196625, 65536, 2, 196626, 65536, 2, 131090, 65536, 2, 131091, 65536, 2, 196621, 65536, 3, 262157, 65536, 3, 262158, 65536, 3, 262159, 65536, 3, 262160, 65536, 3, 262161, 65536, 3, 262162, 65536, 3, 262163, 65536, 3, 196627, 65536, 3, 65527, 131072, 4, 65521, 0, 4, 65522, 65536, 4, 65523, 65536, 4, 65524, 65536, 4, 65525, 65536, 4, 65526, 65536, 4, 131057, 0, 5, 196593, 0, 5, 262129, 0, 5, 327665, 0, 5, 131063, 0, 5, 196599, 0, 5, 262135, 0, 5, 327671, 0, 5, 131058, 65536, 0, 131059, 65536, 0, 131060, 65536, 0, 131061, 65536, 0, 131062, 65536, 0, 196595, 65536, 1, 196596, 65536, 1, 196597, 65536, 1, 196594, 65536, 2, 262130, 65536, 3, 262131, 65536, 2, 262132, 65536, 2, 262133, 65536, 2, 262134, 65536, 3, 196598, 65536, 2, 327666, 65536, 3, 327667, 65536, 3, 327668, 65536, 3, 327669, 65536, 3, 327670, 65536, 3, -65510, 0, 4, -65502, 131072, 4, -65509, 65536, 4, -65508, 65536, 4, -65507, 65536, 4, -65506, 65536, 4, -65505, 65536, 4, -65504, 65536, 4, -65503, 65536, 4, 26, 0, 5, 65562, 0, 5, 131098, 0, 5, 196634, 0, 5, 262170, 0, 5, 34, 0, 5, 65570, 0, 5, 131106, 0, 5, 196642, 0, 5, 262178, 0, 5, 196635, 65536, 5, 196636, 65536, 5, 196637, 65536, 5, 196638, 65536, 5, 196639, 65536, 5, 196640, 65536, 5, 196641, 65536, 5, 262177, 65536, 5, 262176, 65536, 5, 262175, 65536, 5, 262174, 65536, 5, 262173, 65536, 5, 262172, 65536, 5, 262171, 65536, 5, 65563, 65536, 3, 131099, 65536, 3, 131100, 65536, 3, 131101, 65536, 3, 131102, 65536, 3, 131103, 65536, 3, 131104, 65536, 3, 131105, 65536, 3, 65569, 65536, 3, 65564, 65536, 2, 65565, 65536, 2, 65566, 65536, 2, 65567, 65536, 2, 65568, 65536, 2, 27, 65536, 1, 28, 65536, 1, 33, 65536, 1, 32, 65536, 1, 29, 65536, 0, 30, 65536, 0, 31, 65536, 0, -262118, 0, 4, -524262, 0, 5, -458726, 0, 5, -393190, 0, 5, -327654, 0, 5, -589798, 0, 4, -327653, 131072, 9, -327652, 131072, 9, -327651, 196608, 9, -262111, 131072, 4, -589791, 131072, 4, -327647, 131072, 5, -393183, 131072, 5, -458719, 131072, 5, -524255, 131072, 5, -262112, 131072, 9, -262113, 0, 9, -196579, 65536, 9, -196578, 65536, 9, -196580, 0, 9, -131041, 0, 8, -196577, 0, 7, -589797, 65536, 4, -524261, 196608, 4, -458725, 196608, 5, -393184, 131072, 9)
+layer_1/name = "BackgroundL"
+
+[node name="HUD" parent="." instance=ExtResource("3_oi2tv")]
+
+[node name="Player" parent="." node_paths=PackedStringArray("hud") instance=ExtResource("4_6370d")]
+position = Vector2(0, -1)
+hud = NodePath("../HUD")
+
+[node name="Killzone" parent="." instance=ExtResource("5_fojqs")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+shape = SubResource("WorldBoundaryShape2D_p57ef")
+
+[node name="Coins" type="Node" parent="."]
+
+[node name="Coin2" parent="Coins" instance=ExtResource("6_bgnkb")]
+position = Vector2(95, -10)
+
+[node name="Coin" parent="Coins" instance=ExtResource("6_bgnkb")]
+position = Vector2(23, -9)
+
+[node name="Platforms" type="Node" parent="."]
+
+[node name="Platform2" parent="Platforms" instance=ExtResource("7_eiv1w")]
+position = Vector2(91, 7)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform2"]
+libraries = {
+&"": SubResource("AnimationLibrary_iywne")
+}
+autoplay = "move"
+
+[node name="Platform" parent="Platforms" instance=ExtResource("7_eiv1w")]
+position = Vector2(-2, -37)
+
+[node name="Platform3" parent="Platforms" instance=ExtResource("7_eiv1w")]
+position = Vector2(360, -10)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform3"]
+libraries = {
+&"": SubResource("AnimationLibrary_6370d")
+}
+autoplay = "new_animation"
+
+[node name="Spike_Trap" parent="Platforms" instance=ExtResource("10_r4lr3")]
+position = Vector2(-48, -9)
+
+[node name="Spike_Trap2" parent="Platforms" instance=ExtResource("10_r4lr3")]
+position = Vector2(-32, -9)
+
+[node name="Spike2" parent="Platforms" instance=ExtResource("11_r0gsk")]
+position = Vector2(-88, -8)
+
+[node name="Spike3" parent="Platforms" instance=ExtResource("11_r0gsk")]
+position = Vector2(521, -131)
+rotation = -1.5708
+
+[node name="Labels" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Labels"]
+z_index = 10
+offset_left = 58.0
+offset_top = -63.0
+offset_right = 175.0
+offset_bottom = -28.0
+theme_override_fonts/font = ExtResource("9_886ur")
+theme_override_font_sizes/font_size = 16
+text = "Press A to go left
+Press D to go right"
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Wisp2" parent="Enemies" instance=ExtResource("12_oi2tv")]
+position = Vector2(-226, -13)
+rotation = -3.14159
+scale = Vector2(1, -1)
+
+[node name="moscotty" parent="Enemies" instance=ExtResource("13_6370d")]
+position = Vector2(504, -108)
+
+[node name="Wisp" parent="Enemies" instance=ExtResource("12_oi2tv")]
+position = Vector2(548, -29)
+direction = -1
+
+[node name="Frog" parent="Enemies" instance=ExtResource("8_d2m8s")]
+position = Vector2(239, -9)
+
+[node name="hcoin" parent="." instance=ExtResource("14_fojqs")]
+position = Vector2(207, -25)
+
+[node name="pcoin" parent="." instance=ExtResource("15_bgnkb")]
+position = Vector2(50, -12)
+
+[node name="finish" parent="." instance=ExtResource("16_eiv1w")]
+position = Vector2(45, -28)
+temp_damage = 0
